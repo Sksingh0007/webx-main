@@ -10,10 +10,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Newsletter Section */}
         <div className="mb-12 text-center max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold mb-3">Stay Updated</h3>
+          <h3 className="text-2xl font-bold mb-3">Stay Ahead – Weekly AI & Career Insights in Your Inbox</h3>
           <p className="text-muted-foreground mb-6">
-            Get weekly insights on AI and tech developments. No spam, just
-            valuable content.
+            No spam. Just 5-minute reads with actionable tips for students and professionals. Join 40,000+ readers.
           </p>
           <div className="flex gap-2 max-w-md mx-auto">
             <Input
@@ -21,7 +20,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="flex-1"
             />
-            <Button>Subscribe</Button>
+            <Button>Subscribe Free</Button>
           </div>
         </div>
 
@@ -33,8 +32,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold text-primary mb-4">Webspherx</h3>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Understand AI & the Future of Tech — without hype or noise. Making
-              complex technology accessible to everyone.
+              Helping US students and young professionals master AI since 2023.
+            </p>
+            <p className="text-sm text-muted-foreground mb-6 max-w-sm">
+              Trusted by students at Stanford, MIT, Berkeley, and professionals at top tech companies.
             </p>
             <div className="flex gap-2">
               <Button variant="ghost" size="icon" asChild>
@@ -136,7 +137,15 @@ export default function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  FAQ
+                  Student Discount
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Career Resources
                 </a>
               </li>
             </ul>

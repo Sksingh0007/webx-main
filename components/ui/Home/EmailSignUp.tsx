@@ -40,7 +40,7 @@ export default function EmailSignup() {
           disabled={status === "subscribing"}
           className="h-11 sm:h-12 px-6 text-sm sm:text-base whitespace-nowrap"
         >
-          {status === "subscribing" ? "Subscribing..." : "Get Free Report"}
+          {status === "subscribing" ? "Subscribing..." : "Get Free Report →"}
         </Button>
       </form>
       {status === "success" && (

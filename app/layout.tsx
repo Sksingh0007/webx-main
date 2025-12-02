@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Webspherx - AI Solutions for the Future",
-  description: "Empowering Businesses with Cutting-Edge AI Technologies",
+  title: "Webspherx – Master AI & Future Tech Skills for Your Career in 2025 (US Students & Professionals)",
+  description: "Practical AI courses, tools, and prompts for US college students and working professionals. Used at Google, Amazon, and top startups. Start free.",
 };
 
 export default function RootLayout({

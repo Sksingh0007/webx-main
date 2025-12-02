@@ -12,7 +12,7 @@ export default function Loading() {
   return (
     <div className="fixed inset-0 flex items-center justify-center">
       <video
-        src="/Futuristic_Website_Background_Video_Generation.mp4"
+        src="/gemini.mp4"
         className="loading-video absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
@@ -25,7 +25,6 @@ export default function Loading() {
           enter ? "translate-y-0 opacity-100" : "-translate-y-8 opacity-0"
         }`}
       >
-        <h1 className="text-white text-6xl font-bold">Webspherx</h1>
       </div>
     </div>
   );
