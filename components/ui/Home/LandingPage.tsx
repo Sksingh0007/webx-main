@@ -56,17 +56,17 @@ export default function LandingPage() {
       {/* Hero Section - More compact and impactful */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pt-40 sm:pb-16">
         <div className="text-center space-y-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
             <span className="bg-linear-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 175, 255, 0.6)) drop-shadow(0 0 40px rgba(16, 175, 255, 0.3))' }}>
               Master AI <span className="text-white animate-pulse inline-block">+</span> Future Tech Skills
             </span>
             <br />
             <span className="text-foreground">That Actually Get You Hired in 2026</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-xl text-muted-foreground max-w-4xl mx-auto px-4 leading-relaxed">
             Practical courses, tools, prompts, and insights used by 50,000+ students & professionals at Google, Microsoft, Amazon, and top US startups. No fluff. No hype. Just results.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 pt-8">
             <Button asChild size="lg" className="text-base h-12 px-8">
               <Link href="/products">
                 Explore Premium Resources
@@ -87,7 +87,7 @@ export default function LandingPage() {
 
       {/* Value Proposition */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 text-center">
-        <p className="text-xl sm:text-2xl text-muted-foreground font-medium">
+        <p className="text-lg sm:text-xl text-muted-foreground font-medium">
           Clear, practical, no-BS AI education for ambitious students and early-career professionals in the United States.
         </p>
       </section>
@@ -144,7 +144,7 @@ export default function LandingPage() {
       {/* Digital Products Preview - Larger cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4">
             Premium AI Learning Resources Built for Students & Working Professionals
           </h2>
         </div>
@@ -270,7 +270,7 @@ export default function LandingPage() {
       {/* Latest Articles Preview - More compact */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 pb-20">
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4">
             Latest AI & Career Insights (Updated Weekly)
           </h2>
         </div>

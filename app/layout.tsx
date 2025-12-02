@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Home/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { AuthProvider } from "@/components/AuthProvider";
 import Footer from "@/components/ui/Home/Footer";
 import AppLoader from "@/components/AppLoader";
 import CursorFollower from "@/components/CursorFollower";
@@ -18,8 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Webspherx – Master AI & Future Tech Skills for Your Career in 2025 (US Students & Professionals)",
-  description: "Practical AI courses, tools, and prompts for US college students and working professionals. Used at Google, Amazon, and top startups. Start free.",
+  title:
+    "Webspherx – Master AI & Future Tech Skills for Your Career in 2025 (US Students & Professionals)",
+  description:
+    "Practical AI courses, tools, and prompts for US college students and working professionals. Used at Google, Amazon, and top startups. Start free.",
 };
 
 export default function RootLayout({
@@ -35,9 +38,11 @@ export default function RootLayout({
         <CursorFollower />
         <AppLoader>
           <ThemeProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <AuthProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </AuthProvider>
           </ThemeProvider>
         </AppLoader>
       </body>
