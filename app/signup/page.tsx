@@ -34,7 +34,7 @@ export default function SignupPage() {
 
     setLoading(false);
     if (res.ok) {
-      router.push("/");
+      router.push(`/verify-otp?email=${email}`);
     } else {
       setError(res.error || "Registration failed");
     }
@@ -42,7 +42,6 @@ export default function SignupPage() {
 
   return (
     <main className="min-h-screen relative flex items-center justify-center px-4">
-      {/* Background Glow */}
       <div className="absolute -top-20 z-[-2] h-screen w-screen bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(29,161,242,0.3),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(29,161,242,0.3),rgba(0,0,0,0))]"></div>
       </div>

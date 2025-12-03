@@ -16,6 +16,7 @@ type AuthContextValue = {
     password: string
   ) => Promise<{ ok: boolean; error?: string }>;
   logout: () => Promise<void>;
+  refreshUser: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
@@ -26,25 +27,31 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   const [user, setUser] = useState<User>(null);
   const [loading, setLoading] = useState(true);
 
+  async function refreshUser() {
+    try {
+      const res = await fetch("/api/auth/me", {
+        credentials: "include",
+      });
+
+      const data = await res.json();
+      setUser(data.user ?? null);
+    } catch (err) {
+      console.error(err);
+      setUser(null);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   useEffect(() => {
-    let mounted = true;
-    fetch("/api/auth/me")
-      .then((r) => r.json())
-      .then((data) => {
-        if (!mounted) return;
-        setUser(data.user ?? null);
-      })
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false));
-    return () => {
-      mounted = false;
-    };
+    refreshUser()
   }, []);
 
   async function login(email: string, password: string) {
     const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: "include",
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
@@ -59,23 +66,25 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     const res = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
+      credentials: "include",
       body: JSON.stringify({ email, password }),
     });
     const data = await res.json();
     if (res.ok) {
-      setUser(data.user);
       return { ok: true };
     }
     return { ok: false, error: data.error };
   }
 
   async function logout() {
-    await fetch("/api/auth/logout", { method: "POST" });
+    await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
     setUser(null);
   }
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, register, logout }}>
+    <AuthContext.Provider
+      value={{ user, loading, login, register, logout, refreshUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
