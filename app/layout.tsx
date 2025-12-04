@@ -5,7 +5,6 @@ import Navbar from "@/components/ui/Home/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/AuthProvider";
 import Footer from "@/components/ui/Home/Footer";
-import AppLoader from "@/components/AppLoader";
 import CursorFollower from "@/components/CursorFollower";
 
 const geistSans = Geist({
@@ -36,7 +35,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CursorFollower />
-        <AppLoader>
+
           <ThemeProvider>
             <AuthProvider>
               <Navbar />
@@ -44,7 +43,7 @@ export default function RootLayout({
               <Footer />
             </AuthProvider>
           </ThemeProvider>
-        </AppLoader>
+
       </body>
     </html>
   );
