@@ -19,6 +19,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import EmailSignup from "./EmailSignUp";
+import Image from "next/image";
 
 
 export default function LandingPage() {
@@ -57,14 +58,26 @@ export default function LandingPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 sm:pt-40 sm:pb-16">
         <div className="text-center space-y-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl  font-bold leading-tight">
-            <span className="bg-linear-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent" style={{ filter: 'drop-shadow(0 0 20px rgba(16, 175, 255, 0.6)) drop-shadow(0 0 40px rgba(16, 175, 255, 0.3))' }}>
-              Master AI <span className="text-white animate-pulse inline-block">+</span> Future Tech Skills
+            <span
+              className="bg-linear-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent"
+              style={{
+                filter:
+                  "drop-shadow(0 0 20px rgba(16, 175, 255, 0.6)) drop-shadow(0 0 40px rgba(16, 175, 255, 0.3))",
+              }}
+            >
+              Master AI{" "}
+              <span className="text-white animate-pulse inline-block">+</span>{" "}
+              Future Tech Skills
             </span>
             <br />
-            <span className="text-foreground">That Actually Get You Hired in 2026</span>
+            <span className="text-foreground">
+              That Actually Get You Hired in 2026
+            </span>
           </h1>
           <p className="text-lg sm:text-xl md:text-xl text-muted-foreground max-w-4xl mx-auto px-4 leading-relaxed">
-            Practical courses, tools, prompts, and insights used by 50,000+ students & professionals at Google, Microsoft, Amazon, and top US startups. No fluff. No hype. Just results.
+            Practical courses, tools, prompts, and insights used by 50,000+
+            students & professionals at Google, Microsoft, Amazon, and top US
+            startups. No fluff. No hype. Just results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 pt-8">
             <Button asChild size="lg" className="text-base h-12 px-8">
@@ -88,7 +101,8 @@ export default function LandingPage() {
       {/* Value Proposition */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 text-center">
         <p className="text-lg sm:text-xl text-muted-foreground font-medium">
-          Clear, practical, no-BS AI education for ambitious students and early-career professionals in the United States.
+          Clear, practical, no-BS AI education for ambitious students and
+          early-career professionals in the United States.
         </p>
       </section>
 
@@ -104,7 +118,9 @@ export default function LandingPage() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-base leading-relaxed">
-                Deep, data-driven analysis of AI developments, major model releases, and how new breakthroughs impact careers, industries, and everyday life.
+                Deep, data-driven analysis of AI developments, major model
+                releases, and how new breakthroughs impact careers, industries,
+                and everyday life.
               </CardDescription>
             </CardContent>
           </Card>
@@ -118,7 +134,9 @@ export default function LandingPage() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-base leading-relaxed">
-                Exploring the technologies reshaping businesses—AI agents, automation, robotics, quantum computing—and how they create new opportunities for people who adapt early.
+                Exploring the technologies reshaping businesses—AI agents,
+                automation, robotics, quantum computing—and how they create new
+                opportunities for people who adapt early.
               </CardDescription>
             </CardContent>
           </Card>
@@ -132,7 +150,9 @@ export default function LandingPage() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-base leading-relaxed">
-                Premium AI learning resources crafted to accelerate your skills, boost productivity, and help you stay ahead in a fast-moving technology landscape.
+                Premium AI learning resources crafted to accelerate your skills,
+                boost productivity, and help you stay ahead in a fast-moving
+                technology landscape.
               </CardDescription>
             </CardContent>
           </Card>
@@ -145,103 +165,63 @@ export default function LandingPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold mb-4">
-            Premium AI Learning Resources Built for Students & Working Professionals
+            Premium AI Learning Resources Built for Students & Working
+            Professionals
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group border-2 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl" />
-            <CardHeader className="space-y-3 pb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
-                <Package className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="text-2xl">AI Tools Pack – 300+ Curated & Tested Tools (Updated Monthly)</CardTitle>
-              <CardDescription className="text-base">
-                Save hundreds of hours. The ultimate Notion dashboard with the best AI tools for productivity, learning, job hunting, creativity, and career growth in 2025.
-              </CardDescription>
-            </CardHeader>
-            <CardFooter className="flex flex-col items-start gap-4 pt-4">
-              <div className="flex flex-col gap-1">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-primary">$29</span>
-                  <span className="text-muted-foreground">one-time payment</span>
+
+        <Card className="border-2 overflow-hidden hover:shadow-2xl  transition-all duration-300">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+
+            <div className="relative h-64 lg:h-full mx-6  overflow-hidden ">
+              <Image
+                fill
+                src="/webspherx.png"
+                alt="AI Tools Pack"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 "
+              />
+
+            </div>
+
+            {/* CONTENT SIDE */}
+            <div className="p-8 flex flex-col justify-center space-y-6">
+              <div>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <Package className="h-6 w-6 text-primary" />
                 </div>
-                <span className="text-sm text-muted-foreground">Instant access</span>
+
+                <h3 className="text-3xl font-bold mb-2">
+                  AI Tools Pack – 300+ Curated & Tested Tools (Updated Monthly)
+                </h3>
+
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Save hundreds of hours. The ultimate Notion dashboard with the
+                  best AI tools for productivity, learning, job hunting,
+                  creativity, and career growth in 2025.
+                </p>
               </div>
+
+              <div>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-4xl font-bold text-primary">$29</span>
+                  <span className="text-muted-foreground">
+                    one-time payment
+                  </span>
+                </div>
+                <span className="text-sm text-muted-foreground">
+                  Instant access
+                </span>
+              </div>
+
               <Button asChild className="w-full h-11">
                 <Link href="/products/ai-tools-pack">
                   Learn More{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-            </CardFooter>
-          </Card>
-
-          <Card className="hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group border-2 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl" />
-            <CardHeader className="space-y-3 pb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
-                <Sparkles className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="text-2xl">Prompt Packs – 250+ Expert-Level Prompts (ChatGPT, Claude, Gemini)</CardTitle>
-              <CardDescription className="text-base">
-                Proven prompts for acing college assignments, job applications, LinkedIn content, technical interviews, and daily work — used by students at Stanford, NYU, UT Austin & professionals at FAANG.
-              </CardDescription>
-            </CardHeader>
-            <CardFooter className="flex flex-col items-start gap-4 pt-4">
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-bold text-primary">$19</span>
-                <span className="text-muted-foreground">one-time</span>
-              </div>
-              <Button asChild className="w-full h-11">
-                <Link href="/products/prompt-packs">
-                  Learn More{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-
-          <Card className="hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] group border-2 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl" />
-            <CardHeader className="space-y-3 pb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2">
-                <TrendingUp className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="text-2xl">Monthly Disruption Report – Big-Picture AI & Tech Trends</CardTitle>
-              <CardDescription className="text-base">
-                Monthly 30–40 page deep-dive on the AI trends that matter for your career: job market shifts, new tools, salary data, emerging roles, and actionable strategies.
-              </CardDescription>
-            </CardHeader>
-            <CardFooter className="flex flex-col items-start gap-4 pt-4">
-              <div className="flex flex-col gap-1">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-primary">$39</span>
-                  <span className="text-muted-foreground">/month</span>
-                </div>
-                <span className="text-sm text-muted-foreground">Cancel anytime</span>
-              </div>
-              <Button asChild className="w-full h-11">
-                <Link href="/products/disruption-report">
-                  Learn More{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-        <div className="text-center mt-10">
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="h-12 px-8 text-base"
-          >
-            <Link href="/products">
-              View All Products <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+            </div>
+          </div>
+        </Card>
       </section>
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -255,10 +235,13 @@ export default function LandingPage() {
               </Badge>
             </div>
             <CardTitle className="text-2xl sm:text-3xl lg:text-3xl leading-tight px-4">
-              Free 2025 Report: The 7 AI + FutureTech Trends Every Student & Professional Must Know
+              Free 2025 Report: The 7 AI + FutureTech Trends Every Student &
+              Professional Must Know
             </CardTitle>
             <CardDescription className="text-base sm:text-lg max-w-2xl mx-auto px-4">
-              A 25-page breakdown of the exact trends shaping jobs, salaries, and opportunities in 2025–2026. Perfect for college students, recent grads, and professionals who want to stay ahead.
+              A 25-page breakdown of the exact trends shaping jobs, salaries,
+              and opportunities in 2025–2026. Perfect for college students,
+              recent grads, and professionals who want to stay ahead.
             </CardDescription>
           </CardHeader>
           <CardContent className="flex justify-center pb-10">
@@ -292,14 +275,20 @@ export default function LandingPage() {
                   <item.icon className="h-4 w-4 text-muted-foreground" />
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {i === 0 && "How the Latest AI Model Upgrades Will Affect Your Job & Salary in 2025–2026"}
-                  {i === 1 && "AI Adoption in US Companies: Real Data + How to Position Yourself"}
-                  {i === 2 && "The Exact AI Skills Top US Employers Are Hiring For Right Now"}
+                  {i === 0 &&
+                    "How the Latest AI Model Upgrades Will Affect Your Job & Salary in 2025–2026"}
+                  {i === 1 &&
+                    "AI Adoption in US Companies: Real Data + How to Position Yourself"}
+                  {i === 2 &&
+                    "The Exact AI Skills Top US Employers Are Hiring For Right Now"}
                 </CardTitle>
                 <CardDescription className="text-base leading-relaxed">
-                  {i === 0 && "Deep analysis of recent AI breakthroughs and their direct impact on career opportunities and salary expectations."}
-                  {i === 1 && "Data-driven insights into how US companies are implementing AI and what it means for your career strategy."}
-                  {i === 2 && "The most in-demand AI skills based on real job postings from top tech companies and startups."}
+                  {i === 0 &&
+                    "Deep analysis of recent AI breakthroughs and their direct impact on career opportunities and salary expectations."}
+                  {i === 1 &&
+                    "Data-driven insights into how US companies are implementing AI and what it means for your career strategy."}
+                  {i === 2 &&
+                    "The most in-demand AI skills based on real job postings from top tech companies and startups."}
                 </CardDescription>
               </CardHeader>
               <CardFooter className="pt-2">
