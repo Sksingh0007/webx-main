@@ -5,7 +5,6 @@ import Navbar from "@/components/ui/Home/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/AuthProvider";
 import Footer from "@/components/ui/Home/Footer";
-
 import CursorFollower from "@/components/CursorFollower";
 
 const geistSans = Geist({
