@@ -29,6 +29,7 @@ export default function Navbar() {
 
   async function handleLogout() {
     await logout();
+
     router.push("/");
   }
 
@@ -60,11 +61,7 @@ export default function Navbar() {
               {!user && (
                 <>
                   <Link href="/login">
-                    <Button
-                      variant="default"
-                      size="sm"
-                      className="rounded-sm "
-                    >
+                    <Button variant="default" size="sm" className="rounded-sm ">
                       Login
                     </Button>
                   </Link>
@@ -83,7 +80,7 @@ export default function Navbar() {
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-40">
-                    <Link href="/account">
+                    <Link href={`/account/${user.id}`}>
                       <DropdownMenuItem className="cursor-pointer">
                         Profile
                       </DropdownMenuItem>
